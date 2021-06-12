@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f8f5f5;
+}
+
+.content-container{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.lesson-title{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.lesson-title .lesson-title-inner{
+    width: 60%;
+    margin: auto;
+}
+.lesson-title .lesson-title-inner{
+    text-align: center;
+}
+.lesson-body{
+    width: 100%;
+    margin: 20px auto;
+}
+.lesson-body .lesson-inner{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
