@@ -14,9 +14,8 @@
         </div>
     </div>
     <?php
-        $generated_token = openssl_random_pseudo_bytes(30, $safe);
-        $converted_token = bin2hex($generated_token);
-        $isSafe = $safe == 1 ? 'true' : 'false';
+        $generated_token = uniqid('paulos_ab');
+        // $converted_token = bin2hex($generated_token);
 
         $getRandomString = function($string, $len){
             $randString = '';
@@ -31,15 +30,14 @@
     <div class="lesson-body">
         <div class="lesson-inner">
             <div class="lesson-left">Full Token</div>
-            <div class="lesson-right"><?php echo $converted_token; ?></div>
+            <div class="lesson-right"><?php echo $generated_token; ?></div>
         </div>
         <div class="lesson-inner">
             <div class="lesson-left">Token (10 Random Chars)</div>
-            <div class="lesson-right"><?php echo $getRandomString($converted_token, 10); ?></div>
+            <div class="lesson-right"><?php echo $getRandomString($generated_token, 10); ?></div>
         </div>
         <div class="lesson-inner">
             <div class="lesson-left">is Secured</div>
-            <div class="lesson-right"><?php echo $isSafe ?></div>
         </div>
     </div>
 </body>
